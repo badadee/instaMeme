@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+	 <script type="text/javascript" src="mootools-core-1.4.5-full-nocompat.js"></script>
+	 <script type="text/javascript" src="String.levenshtein.js"></script>
+	 <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+     <script src="popup.js"></script>
+	
+	</head>
+	<body>
+		<fieldset>
+			<div id="meme-search">
+				<label for="meme-name">Meme Name</label>
+				<select tabindex="0" id="meme-dropdown-list"></select>
+				
+				<label for="top-caption">Top Caption</label>
+				<input tabindex="1" type="text" name="top-caption" id="top-caption-input" class="text-input-field">
+				
+				<label for="bottom-caption">Bottom Caption</label>
+				<input tabindex="1" type="text" name="bottom-caption" id="bottom-caption-input" class="text-input-field">
+			</div>
+			
+			<div id="meme-results">
+			</div>
+			
+			<div id="generate-meme-section">
+				<button tabindex="5" type="submit" id="generate-meme-link">Get Meme Link</button>
+			</div>
+			
+		</fieldset>
+	</body>
+</html>
+

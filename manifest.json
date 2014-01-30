@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "One-click Meme",
+  "description": "This extension demonstrates a 'browser action' with kittens.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background":{
+	"persistent" : true,
+	"scripts" : ["background.js"]
+  },
+  "content_scripts": [
+    {
+	  "all_frames": true,
+      "matches": [ "*://*.facebook.com/*", "*://*.reddit.com/*" ],
+      "js": ["myscript.js","jquery-1.11.0.min.js"]
+    }
+  ],
+  "permissions": [
+    "https://secure.flickr.com/",
+	"http://version1.api.memegenerator.net/*"
+  ],
+  "web_accessible_resources": ["jquery-1.11.0.min.js", "jquery-1.11.0.min.js.map"]
+}
